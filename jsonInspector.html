@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Coding Problems TODO</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        table-layout: fixed;
+      }
+      table td,
+      table th {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+      }
+      td {
+        word-wrap: break-word;
+        border: 1px solid;
+        height: 90px;
+      }
+      table th {
+        background-color: #f2f2f2;
+      }
+      th:first-child,
+      td:first-child {
+        width: 200px; /* set a fixed width for the first column */
+      }
+    </style>
+    <script src="./my-solutions/solvedProblems.js"></script>
+    <script src="./problems.js"></script>
+    <script src="./display.js"></script>
+  </head>
+  <body onload="displayCurrentJson(jsons[current]),  displaySolvedProblems()">
+    <button onclick="previousFunction()">Previous</button>
+    <button onclick="nextFunction()">Next</button>
+    <h3 id="json-solved"></h3>
+    <table id="json-container"></table>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "type": "module",
+  "name": "coding-problems-and-solutions",
+  "version": "1.0.0",
+  "description": "my solutions to coding problems while i am practicing",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Ubaby",
+  "license": "MIT"
+}
