@@ -57,6 +57,7 @@ function displayCurrentJson(json) {
     }
   }
   jsonContainer.innerHTML = content;
+  displayComment();
 }
 
 function isSolved(json) {
@@ -76,10 +77,33 @@ function displaySolvedProblems() {
   const jsonContainer = document.querySelector('#json-solved');
   const solved = getSolved();
   const count = solved.length;
-  //   let content = '<tr><th>Key</th><th>Value</th></tr>';
-  //   for (var key in json) {
-  //     var value = json[key];
-  //     content += '<tr><td>' + key + '</td><td><pre>' + value + '</pre></td></tr>';
-  //   }
   jsonContainer.innerHTML = 'Solved: ' + count + '/' + limit;
+}
+
+function displayComment() {
+  const jsonContainer = document.querySelector('#comment-for-code');
+  const currentJson = jsons[current];
+  const comment = getCommentForCoding(currentJson);
+  jsonContainer.innerHTML = comment;
+}
+
+function getCommentForCoding(json) {
+  let content = '';
+  for (var key in json) {
+    var value = json[key];
+    value = value.toString().split('.').join('.\n');
+    if (
+      key == 'tags' ||
+      key == 'similarToProblem' ||
+      key == 'outputExample' ||
+      key == 'topicExplanation'
+    ) {
+    } else {
+      content += '//&nbsp' + key + ':&nbsp' + value + '</br>';
+    }
+  }
+  content +=
+    'function main(input){</br>' + '&nbsp&nbsp//&nbspTODO:&nbsp' + '</br>}';
+
+  return content;
 }
