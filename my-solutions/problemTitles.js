@@ -1,6 +1,6 @@
 const titles = [
   {
-    title: 'MinMaxFinder',
+    title: 'minMaxFinder',
     problem: 'Find the maximum and minimum numbers in an array',
   },
   {
@@ -14,5 +14,9 @@ const titles = [
   {
     title: 'mostFrequentElement',
     problem: 'find the average of a set of numbers',
+  },
+  {
+    title: 'implementLinkedList',
+    problem: 'implement a linked list',
   },
 ];
