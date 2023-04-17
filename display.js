@@ -60,6 +60,17 @@ function displayCurrentJson(json) {
   displayComment();
 }
 
+function getLatestUnsolved() {
+  const solved = getSolved();
+  for (let i = 0; i < solved.length; i++) {
+    if (jsons[i].statement == solved[i]) {
+      current++;
+    }
+  }
+
+  displayCurrentJson(jsons[current]);
+}
+
 function isSolved(json) {
   const title = json.statement;
   const solved = getSolved();

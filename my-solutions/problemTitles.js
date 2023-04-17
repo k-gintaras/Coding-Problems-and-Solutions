@@ -19,4 +19,12 @@ const titles = [
     title: 'implementLinkedList',
     problem: 'implement a linked list',
   },
+  {
+    title: 'isPalindrome',
+    problem: 'check if a string is a palindrome',
+  },
+  {
+    title: 'isPrime',
+    problem: 'write a function to check if a number is prime',
+  },
 ];

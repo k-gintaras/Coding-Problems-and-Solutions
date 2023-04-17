@@ -3,6 +3,9 @@ const solved = [
   'reverse a string',
   'find the average of a set of numbers',
   'find the most frequent element in an array',
+  'implement a linked list',
+  'check if a string is a palindrome',
+  // 'write a function to check if a number is prime',
 ];
 
 function getSolved() {

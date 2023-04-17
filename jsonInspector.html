@@ -31,10 +31,10 @@
     <script src="./problems.js"></script>
     <script src="./display.js"></script>
   </head>
-  <body onload="displayCurrentJson(jsons[current]),  displaySolvedProblems()">
+  <body onload="getLatestUnsolved(),  displaySolvedProblems()">
     <button onclick="previousFunction()">Previous</button>
     <button onclick="nextFunction()">Next</button>
-    
+
     <h3 id="json-solved"></h3>
     <table id="json-container"></table>
     <div id="comment-for-code"></div>
