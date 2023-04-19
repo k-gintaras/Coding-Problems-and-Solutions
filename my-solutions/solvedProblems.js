@@ -19,6 +19,13 @@ const solved = [
   'find the smallest element in a binary search tree',
   'find the difference between the largest and smallest elements in an array',
   'implement a queue',
+  'Find the common elements in two sorted arrays',
+  'find the middle element of a linked list',
+  'find the nth element of a linked list',
+  'find the number of elements in a linked list',
+  'check if a linked list contains a cycle',
+  'find the intersection of two linked lists',
+  'Check if a binary tree is balanced',
 ];
 
 function getSolved() {

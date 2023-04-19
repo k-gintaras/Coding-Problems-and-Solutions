@@ -21,6 +21,7 @@ export class BinarySearchTree {
     this.root = null;
   }
 
+  //first try and kinda wrong but works
   fillCareless(arr) {
     for (let i = 0; i < arr.length; i++) {
       const n = arr[i];
@@ -28,6 +29,7 @@ export class BinarySearchTree {
     }
   }
 
+  // advanced solution
   fill(arr) {
     arr = arr.sort((a, b) => {
       return a - b;
@@ -35,6 +37,7 @@ export class BinarySearchTree {
     this.root = this.addBalanced(arr);
   }
 
+  // correct solution
   fillUnbalanced(arr) {
     for (let i = 0; i < arr.length; i++) {
       const n = arr[i];

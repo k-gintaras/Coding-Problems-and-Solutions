@@ -23,7 +23,6 @@ import { mostCommon } from '../my-solutions/unorganized/mostCommon.js';
 import { reverseArray } from '../my-solutions/unorganized/reverseArray.js';
 import { BinarySearchTree } from '../my-solutions/unorganized/binarySearchTree.js';
 import { sortingAlgorithm } from '../my-solutions/unorganized/sortingAlgorithm.js';
-
 import { isAnagram } from '../my-solutions/unorganized/isAnagram.js';
 import { stringLength } from '../my-solutions/stringLength.js';
 import { isEven } from '../my-solutions/unorganized/isEven.js';
@@ -32,23 +31,166 @@ import { largestNumInBst } from '../my-solutions/unorganized/largestNumInBst.js'
 import { smallestNumInBst } from '../my-solutions/unorganized/smallestNumInBst.js';
 import { findDifference } from '../my-solutions/unorganized/findDifference.js';
 import { Queue } from '../my-solutions/unorganized/queue.js';
-// done
-describe('implement queue', () => {
-  it('we added 15 first and removed 15 first, FIFO', () => {
-    const arr = [15, 47, 65, 4, 85, 70, 2, 59, 23, 54];
+import { findCommonInTwo } from '../my-solutions/unorganized/findCommonInTwo.js';
+import { findMiddleInLinked } from '../my-solutions/unorganized/findMiddleInLinked.js';
+import { findNthInLinked } from '../my-solutions/unorganized/findNthInLinked.js';
 
-    const q = new Queue();
+import { linkedListSize } from '../my-solutions/unorganized/linkedListSize.js';
 
-    for (let i = 0; i < arr.length; i++) {
-      const n = arr[i];
-      q.enqueue(n);
-    }
+import { linkedListHasCycle } from '../my-solutions/unorganized/linkedListHasCycle.js';
+import { LinkedListWithLoop } from '../my-solutions/unorganized/linkedListWithLoop.js';
 
-    const res = q.dequeue();
-    console.log(q.get()); // reversed array?
-    assert.equal(res, 15);
+import { twoLinkedIntersection } from '../my-solutions/unorganized/twoLinkedIntersection.js';
+
+describe('find the intersection of two linked lists', () => {
+  it('should be true for output: "The node at which the intersection begins"', () => {
+    const arr1 = [83, 42, 92, 19, 54, 69, 71, 37, 2, 99];
+    const arr2 = [83, 41, 91, 19, 53, 68, 70, 37, 1, 98];
+    const listA = new LinkedList();
+    const listB = new LinkedList();
+    listA.fill(arr1);
+    listB.fill(arr2);
+    const expected = 19;
+    const res = twoLinkedIntersection(listA, listB);
+    console.log('Returned: ');
+    console.log(res);
+    assert.equal(res ? res.data : res, expected);
+    // assert.deepEqual(res, expected);
   });
 });
+// //done
+// describe('check if a linked list contains a cycle', () => {
+//   it('should be true for output: "True/False indicating whether a cycle exists in the linked list"', () => {
+//     const arr = getNumericArray();
+//     const listLoop = new LinkedListWithLoop();
+//     listLoop.fill(arr);
+//     const expected = true;
+//     const res = linkedListHasCycle(listLoop);
+//     console.log('Returned: ');
+//     console.log(res);
+//     assert.equal(res, expected);
+//     // assert.deepEqual(res, expected);
+//   });
+//   it('should be false for output: "True/False indicating whether a cycle exists in the linked list"', () => {
+//     const arr = getNumericArray();
+//     const listNoLoop = new LinkedList();
+//     listNoLoop.fill(arr);
+//     const expected = false;
+
+//     const res = linkedListHasCycle(listNoLoop);
+//     console.log('Returned: ');
+//     console.log(res);
+//     assert.equal(res, expected);
+//     // assert.deepEqual(res, expected);
+//   });
+// });
+
+// // done
+// describe('find the number of elements in a linked list', () => {
+//   it('should be true for output: "The number of elements in the linked list is 10."', () => {
+//     const list = new LinkedList();
+//     const arr = getNumericArray();
+//     list.fill(arr);
+//     const expected = arr.length;
+//     const res = linkedListSize(list);
+//     console.log('Returned: ');
+//     console.log(res);
+//     assert.equal(res, expected);
+//     // assert.deepEqual(res, expected);
+//   });
+// });
+
+// // done
+// describe('find the nth element of a linked list', () => {
+//   it('should be true for output: "The nth element from the end of the list"', () => {
+//     const list = new LinkedList();
+//     const arr = getNumericArray();
+//     list.fill(arr);
+//     const n = 3;
+//     const input = list;
+//     const expected = arr[arr.length - n];
+//     const res = findNthInLinked(n, input);
+//     console.log('Returned: ');
+//     console.log(arr);
+//     console.log(res);
+//     assert.equal(res.data, expected);
+//     // assert.deepEqual(res, expected);
+//   });
+//   it('should be true for output: "The nth element from the end of the list"', () => {
+//     const list = new LinkedList();
+//     const arr = getNumericArray();
+//     list.fill(arr);
+//     const n = arr.length;
+//     const input = list;
+//     const expected = arr[0];
+//     const res = findNthInLinked(n, input);
+//     console.log('Returned: ');
+//     console.log(arr);
+//     console.log(res);
+//     assert.equal(res.data, expected);
+//     // assert.deepEqual(res, expected);
+//   });
+//   it('should be true for output: "The nth element from the end of the list"', () => {
+//     const list = new LinkedList();
+//     const arr = getNumericArray();
+//     list.fill(arr);
+//     const n = 1;
+//     const input = list;
+//     const expected = arr[arr.length - 1];
+//     const res = findNthInLinked(n, input);
+//     console.log('Returned: ');
+//     console.log(arr);
+//     console.log(res);
+//     assert.equal(res.data, expected);
+//     // assert.deepEqual(res, expected);
+//   });
+// });
+
+// done
+// describe('find the middle element of a linked list', () => {
+//   it('should be true for output: "3"', () => {
+//     const input = [1, 2, 9, 7, 4, 5];
+//     const expected = 9;
+//     const linkedList = new LinkedList();
+//     linkedList.fill(input);
+//     const res = findMiddleInLinked(linkedList).data;
+//     console.log('Returned: ');
+//     console.log(res);
+//     assert.equal(res, expected);
+//     // assert.deepEqual(res, expected);
+//   });
+// });
+
+// // done
+// describe('Find the common elements in two sorted arrays', () => {
+//   it('should be true for output: "[1, 4, 9]"', () => {
+//     const input1 = [1, 3, 4, 6, 7, 9];
+//     const input2 = [1, 2, 4, 5, 9, 10];
+//     const expected = [1, 4, 9];
+//     const res = findCommonInTwo(input1, input2);
+//     console.log('Returned: ');
+//     console.log(res);
+//     // assert.equal(res, expected);
+//     assert.deepEqual(res, expected);
+//   });
+// });
+// // done
+// describe('implement queue', () => {
+//   it('we added 15 first and removed 15 first, FIFO', () => {
+//     const arr = [15, 47, 65, 4, 85, 70, 2, 59, 23, 54];
+
+//     const q = new Queue();
+
+//     for (let i = 0; i < arr.length; i++) {
+//       const n = arr[i];
+//       q.enqueue(n);
+//     }
+
+//     const res = q.dequeue();
+//     console.log(q.get()); // reversed array?
+//     assert.equal(res, 15);
+//   });
+// });
 
 // // done
 // describe('difference between max and min', () => {

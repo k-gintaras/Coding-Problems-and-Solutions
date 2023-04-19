@@ -6,6 +6,9 @@ extracted only coding problems from interview questions
 loaded each problem into template with more information for each problem
 
 TODO:
+each solution has no bad input check, to ilustrate solution to algorithm and not bad input
+maybe make them all check for bad input
+
 is algorithm common in literature
 what type of topic is covered if so (so you can learn)
 

@@ -47,14 +47,19 @@
   <body onload="getLatestUnsolved(),  displaySolvedProblems()">
     <button onclick="previousFunction()">Previous</button>
     <button onclick="nextFunction()">Next</button>
+    <button class="copy-btn" id="copy-btn" onClick="copyStatement(event)">
+      Copy Statement
+    </button>
 
     <h3 id="json-solved"></h3>
     <table id="json-container"></table>
-    <button class="copy-btn" id="copy-btn" onClick="copy(event)">Copy</button>
+    <button class="copy-btn" id="copy-btn" onClick="copy(event)">
+      Copy Todo
+    </button>
     <pre id="code-todo"></pre>
 
     <button class="copy-btn" id="copy-test-btn" onClick="copyTest(event)">
-      Copy
+      Copy Test
     </button>
     <pre id="code-test"></pre>
 

@@ -92,6 +92,10 @@ export function getSortedNumericArray() {
   return array6;
 }
 
+/**
+ * @function
+ * @returns [83, 42, 92, 19, 54, 69, 71, 37, 2, 99]
+ */
 export function getNumericArray() {
   return array7;
 }

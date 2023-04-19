@@ -45,7 +45,11 @@ function displayCurrentJson(json) {
     value = value.toString().split('.').join('.\n');
     if (key == 'statement') {
       content +=
-        '<tr><td>' + key + '</td><td><pre><b>' + value + '</b></pre></td></tr>';
+        '<tr><td>' +
+        key +
+        '</td><td><pre><b id="code-statement">\'' +
+        value +
+        "'</b></pre></td></tr>";
     } else {
       content +=
         '<tr><td>' + key + '</td><td><pre>' + value + '</pre></td></tr>';
@@ -109,7 +113,11 @@ export function func(input) {
 
 function getCommentForTesting(json) {
   let content = '';
-  content += getTestForCoding(json.inputExample);
+  content += getTestForCoding(
+    json.inputExample,
+    json.statement,
+    json.outputExample
+  );
   return content;
 }
 
@@ -142,15 +150,15 @@ function isIgnoredTags(key) {
   );
 }
 
-function getTestForCoding(inputExample) {
+function getTestForCoding(inputExample, statement, outputExample) {
   const generatedStringForPre = `
 
 import { func } from '../func.js';
 
-describe(statement, () => {
-  it('expectation', () => {
+describe('${statement}', () => {
+  it('should be true for output: ${JSON.stringify(outputExample)}', () => {
     const input = ${JSON.stringify(inputExample)};
-    const expected = true;
+    const expected = ${JSON.stringify(outputExample)};
     const res = func(input);
     console.log('Returned: ');
     console.log(res);
@@ -167,6 +175,10 @@ function copy(event) {
 
 function copyTest(event) {
   copyToClipboard('code-test', event);
+}
+
+function copyStatement(event) {
+  copyToClipboard('code-statement', event);
 }
 
 function copyToClipboard(elementIdFrom, event) {

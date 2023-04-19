@@ -84,4 +84,28 @@ const titles = [
     title: 'findCommonInTwo',
     problem: 'Find the common elements in two sorted arrays',
   },
+  {
+    title: 'findMiddleInLinked',
+    problem: 'find the middle element of a linked list',
+  },
+  {
+    title: 'findNthInLinked',
+    problem: 'find the nth element of a linked list',
+  },
+  {
+    title: 'linkedListSize',
+    problem: 'find the number of elements in a linked list',
+  },
+  {
+    title: 'linkedListHasCycle',
+    problem: 'check if a linked list contains a cycle',
+  },
+  {
+    title: 'twoLinkedIntersection',
+    problem: 'find the intersection of two linked lists',
+  },
+  {
+    title: 'isBinaryTreeBalanced',
+    problem: 'Check if a binary tree is balanced',
+  },
 ];
