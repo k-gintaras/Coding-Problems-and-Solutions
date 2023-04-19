@@ -3,6 +3,19 @@
   <head>
     <title>Coding Problems TODO</title>
     <style>
+      .copy-btn {
+        background-color: #eee;
+        border: none;
+        color: #666;
+        font-size: 14px;
+        padding: 8px 12px;
+        text-transform: uppercase;
+        cursor: pointer;
+      }
+
+      .copy-btn:hover {
+        background-color: #ddd;
+      }
       table {
         border-collapse: collapse;
         width: 100%;
@@ -37,6 +50,14 @@
 
     <h3 id="json-solved"></h3>
     <table id="json-container"></table>
+    <button class="copy-btn" id="copy-btn" onClick="copy(event)">Copy</button>
+    <pre id="code-todo"></pre>
+
+    <button class="copy-btn" id="copy-test-btn" onClick="copyTest(event)">
+      Copy
+    </button>
+    <pre id="code-test"></pre>
+
     <div id="comment-for-code"></div>
   </body>
 </html>
