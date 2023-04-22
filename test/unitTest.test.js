@@ -10,6 +10,8 @@ import {
   getSortedNumericArray,
   getNumericArray,
   getRandomArray,
+  getBalancedTrees,
+  getUnbalancedTrees,
 } from '../testData.js';
 
 import { isPalindrome } from '../my-solutions/unorganized/isPalindrome.js';
@@ -42,22 +44,73 @@ import { LinkedListWithLoop } from '../my-solutions/unorganized/linkedListWithLo
 
 import { twoLinkedIntersection } from '../my-solutions/unorganized/twoLinkedIntersection.js';
 
-describe('find the intersection of two linked lists', () => {
-  it('should be true for output: "The node at which the intersection begins"', () => {
-    const arr1 = [83, 42, 92, 19, 54, 69, 71, 37, 2, 99];
-    const arr2 = [83, 41, 91, 19, 53, 68, 70, 37, 1, 98];
-    const listA = new LinkedList();
-    const listB = new LinkedList();
-    listA.fill(arr1);
-    listB.fill(arr2);
-    const expected = 19;
-    const res = twoLinkedIntersection(listA, listB);
+import { isBinaryTreeBalanced } from '../my-solutions/unorganized/isBinaryTreeBalanced.js';
+import { isBalanced } from '../my-solutions/unorganized/isBinaryTreeBalanced-practice.js';
+
+// done
+describe('Check if a binary tree is balanced', () => {
+  it('should be true for output: "True or False"', () => {
+    const input = { root: getBalancedTrees()[3] };
+    // console.log(input);
+    const expected = true;
+    const res = isBalanced(input);
     console.log('Returned: ');
     console.log(res);
-    assert.equal(res ? res.data : res, expected);
+    assert.equal(res, expected);
+    // assert.deepEqual(res, expected);
+  });
+  it('should be true for output: "True or False"', () => {
+    const input = { root: getUnbalancedTrees()[2] };
+    // console.log(input);
+    const expected = false;
+    const res = isBalanced(input);
+    console.log('Returned: ');
+    console.log(res);
+    assert.equal(res, expected);
     // assert.deepEqual(res, expected);
   });
 });
+// // done
+// describe('Check if a binary tree is balanced', () => {
+//   it('should be true for output: "True or False"', () => {
+//     const input = { root: getBalancedTrees()[3] };
+//     // console.log(input);
+//     const expected = true;
+//     const res = isBinaryTreeBalanced(input);
+//     console.log('Returned: ');
+//     console.log(res);
+//     assert.equal(res, expected);
+//     // assert.deepEqual(res, expected);
+//   });
+//   it('should be true for output: "True or False"', () => {
+//     const input = { root: getUnbalancedTrees()[2] };
+//     // console.log(input);
+//     const expected = false;
+//     const res = isBinaryTreeBalanced(input);
+//     console.log('Returned: ');
+//     console.log(res);
+//     assert.equal(res, expected);
+//     // assert.deepEqual(res, expected);
+//   });
+// });
+
+// // done
+// describe('find the intersection of two linked lists', () => {
+//   it('should be true for output: "The node at which the intersection begins"', () => {
+//     const arr1 = [83, 42, 92, 19, 54, 69, 71, 37, 2, 99];
+//     const arr2 = [83, 41, 91, 19, 53, 68, 70, 37, 1, 98];
+//     const listA = new LinkedList();
+//     const listB = new LinkedList();
+//     listA.fill(arr1);
+//     listB.fill(arr2);
+//     const expected = 19;
+//     const res = twoLinkedIntersection(listA, listB);
+//     console.log('Returned: ');
+//     console.log(res);
+//     assert.equal(res ? res.data : res, expected);
+//     // assert.deepEqual(res, expected);
+//   });
+// });
 // //done
 // describe('check if a linked list contains a cycle', () => {
 //   it('should be true for output: "True/False indicating whether a cycle exists in the linked list"', () => {

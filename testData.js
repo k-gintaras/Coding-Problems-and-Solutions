@@ -1,3 +1,269 @@
+//      10
+//    /    \
+//   5      15
+//  / \    /  \
+// 3   7  12  20
+export const balancedTree1 = {
+  value: 10,
+  left: {
+    value: 5,
+    left: {
+      value: 3,
+      left: null,
+      right: null,
+    },
+    right: {
+      value: 7,
+      left: null,
+      right: null,
+    },
+  },
+  right: {
+    value: 15,
+    left: {
+      value: 12,
+      left: null,
+      right: null,
+    },
+    right: {
+      value: 20,
+      left: null,
+      right: null,
+    },
+  },
+};
+
+//     7
+//    / \
+//   4  10
+//  / \ / \
+// 2  6 8 12
+//        \
+//        15
+export const balancedTree2 = {
+  value: 7,
+  left: {
+    value: 4,
+    left: {
+      value: 2,
+      left: null,
+      right: null,
+    },
+    right: {
+      value: 6,
+      left: null,
+      right: null,
+    },
+  },
+  right: {
+    value: 10,
+    left: {
+      value: 8,
+      left: null,
+      right: null,
+    },
+    right: {
+      value: 12,
+      left: null,
+      right: {
+        value: 15,
+        left: null,
+        right: null,
+      },
+    },
+  },
+};
+
+//        20
+//       /  \
+//      10  30
+//     /  \ / \
+//    5  15 25 35
+//   / \
+//  2   7
+export const balancedTree3 = {
+  value: 20,
+  left: {
+    value: 10,
+    left: {
+      value: 5,
+      left: {
+        value: 2,
+        left: null,
+        right: null,
+      },
+      right: {
+        value: 7,
+        left: null,
+        right: null,
+      },
+    },
+    right: {
+      value: 15,
+      left: null,
+      right: null,
+    },
+  },
+  right: {
+    value: 30,
+    left: {
+      value: 25,
+      left: null,
+      right: null,
+    },
+    right: {
+      value: 35,
+      left: null,
+      right: null,
+    },
+  },
+};
+
+//      50
+//     /  \
+//   25   75
+//  /  \   / \
+// 10  35 65 85
+//     / \
+//    30 40
+export const balancedTree4 = {
+  value: 50,
+  left: {
+    value: 25,
+    left: {
+      value: 10,
+      left: null,
+      right: null,
+    },
+    right: {
+      value: 35,
+      left: {
+        value: 30,
+        left: null,
+        right: null,
+      },
+      right: {
+        value: 40,
+        left: null,
+        right: null,
+      },
+    },
+  },
+  right: {
+    value: 75,
+    left: {
+      value: 65,
+      left: null,
+      right: {
+        value: 70,
+        left: null,
+        right: null,
+      },
+    },
+    right: {
+      value: 85,
+      left: null,
+      right: null,
+    },
+  },
+};
+
+// 10
+//   \
+//    15
+//      \
+//       20
+const unbalancedTree1 = {
+  value: 10,
+  right: {
+    value: 15,
+    right: {
+      value: 20,
+      left: null,
+      right: null,
+    },
+    left: null,
+  },
+  left: null,
+};
+
+// 5
+//  \
+//   20
+//  /  \
+// 10  30
+//       \
+//        40
+const unbalancedTree2 = {
+  value: 5,
+  right: {
+    value: 20,
+    right: {
+      value: 30,
+      right: {
+        value: 40,
+        left: null,
+        right: null,
+      },
+      left: null,
+    },
+    left: {
+      value: 10,
+      left: null,
+      right: null,
+    },
+  },
+  left: null,
+};
+
+//     15
+//    /   \
+//   10   20
+//  /  \
+// 5    13
+//     /
+//    12
+const unbalancedTree3 = {
+  value: 15,
+  right: {
+    value: 20,
+    left: null,
+    right: null,
+  },
+  left: {
+    value: 10,
+    right: {
+      value: 13,
+      left: {
+        value: 12,
+        left: null,
+        right: null,
+      },
+      right: null,
+    },
+    left: {
+      value: 5,
+      left: null,
+      right: null,
+    },
+  },
+};
+
+export const balancedTrees = [
+  balancedTree1,
+  balancedTree2,
+  balancedTree3,
+  balancedTree4,
+];
+
+export const unbalancedTrees = [
+  unbalancedTree1,
+  unbalancedTree2,
+  unbalancedTree3,
+];
+
+export const allTrees = balancedTrees.concat(unbalancedTrees);
+
 export const array1 = [
   1,
   `hello`,
@@ -107,6 +373,15 @@ export function getRandomArray() {
     randomArray.push(randomNumber);
   }
   return randomArray;
+}
+export function getBalancedTrees() {
+  return balancedTrees;
+}
+export function getUnbalancedTrees() {
+  return unbalancedTrees;
+}
+export function getAllTrees() {
+  return allTrees;
 }
 
 // import {getAllArrays,getHardArrays,getEasyArrays,getTextArray,getSortedNumericArray,getNumericArray,getRandomArray} from './testData.js'
