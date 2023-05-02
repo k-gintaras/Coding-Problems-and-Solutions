@@ -12,6 +12,7 @@ import {
   getRandomArray,
   getBalancedTrees,
   getUnbalancedTrees,
+  getUnweightedGraphs,
 } from '../testData.js';
 
 import { isPalindrome } from '../my-solutions/unorganized/isPalindrome.js';
@@ -47,29 +48,575 @@ import { twoLinkedIntersection } from '../my-solutions/unorganized/twoLinkedInte
 import { isBinaryTreeBalanced } from '../my-solutions/unorganized/isBinaryTreeBalanced.js';
 import { isBalanced } from '../my-solutions/unorganized/isBinaryTreeBalanced-practice.js';
 
+import { maxDepthBinaryTree } from '../my-solutions/unorganized/maxDepthBinaryTree.js';
+
+import { traverseInPreorder } from '../my-solutions/unorganized/traverseInPreorder.js';
+
+import { traverseInPostorder } from '../my-solutions/unorganized/traverseInPostorder.js';
+import { traverseInOrder } from '../my-solutions/unorganized/traverseInOrder.js';
+
+import { lowestCommonAncestor } from '../my-solutions/unorganized/lowestCommonAncestor.js';
+
+import {
+  isStringNumber,
+  isStringInteger,
+  isStringFloat,
+  isStringHexadecimal,
+} from '../my-solutions/unorganized/isStringNumber.js';
+
+import { HashTable } from '../my-solutions/unorganized/hashTable.js';
+
+import { longestNonRepeatingString } from '../my-solutions/unorganized/longestNonRepeatingString.js';
+
+import { largestConsecutiveSum } from '../my-solutions/unorganized/largestConsecutiveSum.js';
+
+import {
+  lengthOfLcs,
+  longestCommonSubsequence,
+  findLargestCommonSubsequence,
+} from '../my-solutions/unorganized/longestCommonSubsequence.js';
+
+import {
+  waysToGiveChange,
+  countWaysToGive,
+  countWaysToGiveCoin,
+} from '../my-solutions/unorganized/waysToGiveChange.js';
+
+import {
+  waysToUseGivenBrackets,
+  catalanBracketCount,
+} from '../my-solutions/unorganized/waysToUseGivenBrackets.js';
+
+import { waysToTraverseMatrix } from '../my-solutions/unorganized/waysToTraverseMatrix.js';
+
+import { countIslands } from '../my-solutions/unorganized/countIslands.js';
+
+import { countConnectedNodes } from '../my-solutions/unorganized/countConnectedNodes.js';
+import { getGraphs, getGraphAns } from '../testData.js';
+
+import { shortestUnweightedPath } from '../my-solutions/unorganized/shortestUnweightedPath.js';
+
+import {
+  binaryTreeDiameter1,
+  binaryTreeDiameter2,
+  binaryTreeDiameter3,
+} from '../my-solutions/binaryTreeDiameter.js';
+
+// // done
+// describe('Find the diameter of a binary tree', () => {
+//   class Node {
+//     constructor(value) {
+//       this.value = value;
+//       this.left = null;
+//       this.right = null;
+//     }
+//   }
+//   it('should be true for output: "The diameter of the binary tree"', () => {
+//     const binaryTree1 = [
+//       1, // root
+//       2,
+//       3, // level 1
+//       4,
+//       5,
+//       6,
+//       7, // level 2
+//     ];
+
+//     const input = binaryTree1;
+//     const expected = 6;
+//     const res = binaryTreeDiameter1(input);
+//     console.log('Returned: ');
+//     console.log(res);
+//     assert.equal(res, expected);
+//     // assert.deepEqual(res, expected);
+//   });
+//   it('should be true for output: "The diameter of the binary tree"', () => {
+//     const tree = new Node(1);
+//     tree.left = new Node(2);
+//     tree.right = new Node(3);
+//     tree.left.left = new Node(4);
+//     tree.left.right = new Node(5);
+//     tree.right.left = new Node(6);
+//     tree.right.right = new Node(7);
+
+//     const input = { root: tree };
+//     const expected = 4;
+//     const res = binaryTreeDiameter2(input);
+//     console.log('Returned: ');
+//     console.log(res);
+//     assert.equal(res, expected);
+//     // assert.deepEqual(res, expected);
+//   });
+//   it('should be true for output: "The diameter of the binary tree"', () => {
+//     const binaryTree1 = [
+//       1, // root
+//       2,
+//       3, // level 1
+//       4,
+//       5,
+//       6,
+//       7, // level 2
+//     ];
+
+//     const input = binaryTree1;
+//     const expected = 4;
+//     const res = binaryTreeDiameter3(input);
+//     console.log('Returned: ');
+//     console.log(res);
+//     assert.equal(res, expected);
+//     // assert.deepEqual(res, expected);
+//   });
+// });
+
 // done
-describe('Check if a binary tree is balanced', () => {
-  it('should be true for output: "True or False"', () => {
-    const input = { root: getBalancedTrees()[3] };
-    // console.log(input);
-    const expected = true;
-    const res = isBalanced(input);
-    console.log('Returned: ');
-    console.log(res);
-    assert.equal(res, expected);
-    // assert.deepEqual(res, expected);
-  });
-  it('should be true for output: "True or False"', () => {
-    const input = { root: getUnbalancedTrees()[2] };
-    // console.log(input);
-    const expected = false;
-    const res = isBalanced(input);
-    console.log('Returned: ');
-    console.log(res);
-    assert.equal(res, expected);
-    // assert.deepEqual(res, expected);
-  });
-});
+// describe('Find the shortest path between two nodes in a graph', () => {
+//   it('should be true for output: "The shortest path between the two nodes is the path with the least number of edges."', () => {
+//     // 0---1
+//     // |   |
+//     // |   |
+//     // 3---2
+//     // |
+//     // |
+//     // 4
+//     // export const uGraph1 = {
+//     //   0: [1, 3],
+//     //   1: [0, 2],
+//     //   2: [1, 3],
+//     //   3: [0, 2, 4],
+//     //   4: [3],
+//     // };
+
+//     const i = 0;
+//     const input = getUnweightedGraphs()[i];
+//     const a = 1;
+//     const b = 4;
+//     const expected = 3;
+//     const res = shortestUnweightedPath(input, a, b);
+//     console.log('Returned: ');
+//     console.log(res);
+//     assert.equal(res, expected);
+//     // assert.deepEqual(res, expected);
+//   });
+//   it('should be true for output: "The shortest path between the two nodes is the path with the least number of edges."', () => {
+//     // 0---1
+//     // |   |
+//     // |   |
+//     // 3---2
+//     // |
+//     // |
+//     // 4
+//     // export const uGraph1 = {
+//     //   0: [1, 3],
+//     //   1: [0, 2],
+//     //   2: [1, 3],
+//     //   3: [0, 2, 4],
+//     //   4: [3],
+//     // };
+
+//     const i = 0;
+//     const input = getUnweightedGraphs()[i];
+//     const a = 0;
+//     const b = 2;
+//     const expected = 2;
+//     const res = shortestUnweightedPath(input, a, b);
+//     console.log('Returned: ');
+//     console.log(res);
+//     assert.equal(res, expected);
+//     // assert.deepEqual(res, expected);
+//   });
+// });
+// // done
+// describe('find the number of connected components in a graph', () => {
+//   it('should be true for output: "The number of connected components in G."', () => {
+//     const i = 1;
+//     const input = getGraphs()[i];
+//     const expected = getGraphAns()[i];
+//     const res = countConnectedNodes(input);
+//     console.log('Returned: ');
+//     console.log(res);
+//     assert.equal(res, expected);
+//     // assert.deepEqual(res, expected);
+//   });
+// });
+
+// // done
+// describe('find the number of islands in a 2d grid', () => {
+//   it('should be true for output: "3"', () => {
+//     const input = [
+//       [1, 1, 0, 0, 0],
+//       [0, 1, 0, 0, 1],
+//       [1, 0, 0, 1, 1],
+//       [0, 0, 0, 0, 0],
+//     ];
+//     const expected = 2;
+//     const res = countIslands(input);
+//     console.log('Returned: ');
+//     console.log(res);
+//     assert.equal(res, expected);
+//     // assert.deepEqual(res, expected);
+//   });
+// });
+// describe('find the number of islands in a 2d grid', () => {
+//   it('should be true for output: "5"', () => {
+//     const input = [
+//       [1, 1, 0, 0, 0, 1, 1],
+//       [0, 1, 0, 0, 1, 0, 1],
+//       [1, 0, 0, 1, 1, 1, 0],
+//       [0, 0, 0, 0, 0, 0, 0],
+//       [1, 1, 0, 1, 1, 0, 0],
+//       [1, 1, 0, 0, 0, 0, 1],
+//     ];
+
+//     const expected = 5;
+//     const res = countIslands(input);
+//     console.log('Returned: ');
+//     console.log(res);
+//     assert.equal(res, expected);
+//     // assert.deepEqual(res, expected);
+//   });
+// });
+
+// //done
+
+// describe('find the number of ways to traverse a matrix', () => {
+//   it('should be true for output: "6"', () => {
+//     const m = 5;
+//     const n = 5;
+//     const expected = 70;
+//     const res = waysToTraverseMatrix(m, n);
+//     console.log('Returned: ');
+//     console.log(res);
+//     assert.equal(res, expected);
+//     // assert.deepEqual(res, expected);
+//   });
+// });
+
+// //done
+// describe('find the number of valid parentheses combinations', () => {
+//   it('should be true for output: "Number of valid parentheses combinations"', () => {
+//     const input = 10;
+//     const expected = 5;
+//     const res = waysToUseGivenBrackets(input);
+//     console.log('Returned: ');
+//     console.log(res);
+//     assert.equal(res, expected);
+//     // assert.deepEqual(res, expected);
+//   });
+//   it('should be true for output: "Number of valid parentheses combinations"', () => {
+//     const input = 10;
+//     const expected = 5;
+//     const res = catalanBracketCount(input);
+//     console.log('Returned: ');
+//     console.log(res);
+//     assert.equal(res, expected);
+//     // assert.deepEqual(res, expected);
+//   });
+// });
+
+// // done
+// describe('find the number of ways to make change for a given amount', () => {
+//   it('should be true for output: "The output would be the total number of ways to make change for 5 using coins of different denominations, which is 5."', () => {
+//     // const input = { cash: 5, change: [1, 2, 3] };
+//     const input = { cash: 16, change: [1, 2, 3] };
+//     const expected = 30;
+//     const res = countWaysToGiveCoin(input.cash, input.change);
+//     console.log('Returned: ');
+//     console.log(res);
+//     assert.equal(res, expected);
+//     // assert.deepEqual(res, expected);
+//   });
+//   it('should be true for output: "The output would be the total number of ways to make change for 5 using coins of different denominations, which is 5."', () => {
+//     // const input = { cash: 5, change: [1, 2, 3] };
+//     const input = { cash: 16, change: [1, 2, 3] };
+//     const expected = 30;
+//     const res = countWaysToGive(input.cash, input.change);
+//     console.log('Returned: ');
+//     console.log(res);
+//     assert.equal(res, expected);
+//     // assert.deepEqual(res, expected);
+//   });
+// });
+
+// // done
+// describe('find the length of the longest common subsequence', () => {
+//   const examples = [
+//     ['Two strings, s1 and s2', 'Three strings, s1, s2 and s3'],
+//     ['abcd', 'abedc'],
+//     ['abc', 'def'],
+//     ['abc', 'ac'],
+//     ['1234', '1342'],
+//     ['aabaa', 'aaaaa'],
+//     ['hello', 'world'], // because algorithm finds non sequential subsequences too, LO and OL, which would not count in the end
+//     ['abcd', 'dcba'],
+//     ['aabbcc', 'abccba'],
+//     ['abcdef', 'ghijkl'],
+//     ['abc', 'cba'],
+//   ];
+
+//   const correctAnswers = [
+//     'T strings, s1 and s',
+//     'abc',
+//     '',
+//     'ac',
+//     '34',
+//     'aaa',
+//     '',
+//     'dcb',
+//     'abc',
+//     '',
+//     'c',
+//   ];
+
+//   it('should be true for output: "The length of the longest common subsequence"', () => {
+//     const i = 1;
+//     const s1 = examples[i][0];
+//     const s2 = examples[i][1];
+//     const expected = correctAnswers[i].length;
+//     const res = lengthOfLcs(s1, s2);
+//     assert.equal(res, expected);
+//   });
+// });
+
+// //done
+// describe('find the largest sum of a consecutive subarray', () => {
+//   it('should be true for output: "6"', () => {
+//     const input = [-2, 1, -3, 4, -1, 2, 1, -5, 4];
+//     const expected = 6;
+//     const res = largestConsecutiveSum(input);
+//     console.log('Returned: ');
+//     console.log(res);
+//     assert.equal(res, expected);
+//     // assert.deepEqual(res, expected);
+//   });
+// });
+
+// // done
+// describe('find the longest substring without repeating characters', () => {
+//   it('should be true for output: "abc"', () => {
+//     const input = 'abcdefghijkadabgladosacabaalboquirke';
+//     const expected = 'bcad';
+//     const res = longestNonRepeatingString(input);
+//     console.log('Returned: ');
+//     console.log(res);
+//     assert.equal(res, expected);
+//     // assert.deepEqual(res, expected);
+//   });
+// });
+// // done
+// describe('implement a hash table', () => {
+//   it('should be true for output: "The output of a hash table is the value associated with the given key."', () => {
+//     const t = new HashTable(10);
+//     t.add('abc', 1);
+//     t.add('bcd', 2);
+//     t.add('cba', 3);
+//     const res = t.get('cba');
+//     const expected = 3;
+//     console.log('Returned: ' + t.get('cba'));
+//     console.log(t);
+//     assert.equal(res, expected);
+//     // assert.deepEqual(res, expected);
+//   });
+//   it('should be true for output: "The output of a hash table is the value associated with the given key."', () => {
+//     const t = new HashTable(10);
+//     t.add('abc', 1);
+//     t.add('bcd', 2);
+//     t.add('cba', 3);
+//     const removed = t.remove('cba');
+//     console.log('REMOVED: ' + removed);
+//     const res = t.get('cba');
+//     const expected = null;
+//     console.log('Returned: ' + t.get('cba'));
+//     console.log(t);
+//     assert.equal(res, expected);
+//     // assert.deepEqual(res, expected);
+//   });
+// });
+// // done
+// describe('check if a string is a valid number', () => {
+//   it('should be true for output: "true"', () => {
+//     const input = '123';
+//     const expected = true;
+//     const res = isStringNumber(input);
+//     console.log('Returned: ');
+//     console.log(res);
+//     assert.equal(res, expected);
+//     // assert.deepEqual(res, expected);
+//   });
+//   it('should be true for output: "true"', () => {
+//     const input = '123.1';
+//     const expected = true;
+//     const res = isStringNumber(input);
+//     console.log('Returned: ');
+//     console.log(res);
+//     assert.equal(res, expected);
+//     // assert.deepEqual(res, expected);
+//   });
+//   it('should be true for output: "true"', () => {
+//     const input = '12a ?31a';
+//     const expected = false;
+//     const res = isStringNumber(input);
+//     console.log('Returned: ');
+//     console.log(res);
+//     assert.equal(res, expected);
+//     // assert.deepEqual(res, expected);
+//   });
+//   it('should be true for output: "true"', () => {
+//     const input = '12f10abc';
+//     const expected = true;
+//     const res = isStringNumber(input);
+//     console.log('Returned: ');
+//     console.log(res);
+//     assert.equal(res, expected);
+//     // assert.deepEqual(res, expected);
+//   });
+//   it('should be true for output: "true"', () => {
+//     const input = '123';
+//     const expected = true;
+//     const res = isStringInteger(input);
+//     console.log('Returned: ');
+//     console.log(res);
+//     assert.equal(res, expected);
+//     // assert.deepEqual(res, expected);
+//   });
+//   it('should be true for output: "true"', () => {
+//     const input = '123.1';
+//     const expected = false;
+//     const res = isStringInteger(input);
+//     console.log('Returned: ');
+//     console.log(res);
+//     assert.equal(res, expected);
+//     // assert.deepEqual(res, expected);
+//   });
+//   it('should be true for output: "true"', () => {
+//     const input = '123a';
+//     const expected = false;
+//     const res = isStringInteger(input);
+//     console.log('Returned: ');
+//     console.log(res);
+//     assert.equal(res, expected);
+//     // assert.deepEqual(res, expected);
+//   });
+//   it('should be true for output: "true"', () => {
+//     const input = '123.a';
+//     const expected = false;
+//     const res = isStringInteger(input);
+//     console.log('Returned: ');
+//     console.log(res);
+//     assert.equal(res, expected);
+//     // assert.deepEqual(res, expected);
+//   });
+//   it('should be true for output: "true"', () => {
+//     const input = '-123.12312';
+//     const expected = true;
+//     const res = isStringFloat(input);
+//     console.log('Returned: ');
+//     console.log(res);
+//     assert.equal(res, expected);
+//     // assert.deepEqual(res, expected);
+//   });
+// });
+
+// // done
+// describe('Find the lowest common ancestor of two nodes in a binary tree', () => {
+//   it('should be true for output: "The lowest common ancestor of the two nodes"', () => {
+//     const input = { root: getBalancedTrees()[0] };
+//     const expected = 5;
+//     const res = lowestCommonAncestor(
+//       input.root,
+//       { value: 3 },
+//       { value: 7 }
+//     ).value;
+//     console.log('Returned: ');
+//     console.log(res);
+//     assert.equal(res, expected);
+//     // assert.deepEqual(res, expected);
+//   });
+// });
+
+// // done
+// describe('traverse a binary tree in in-order', () => {
+//   it('should be true for output: "The nodes of the tree in in-order traversal order"', () => {
+//     const input = { root: getBalancedTrees()[0] };
+//     const expected = [3, 5, 7, 10, 12, 15, 20];
+//     const res = traverseInOrder(input, 'value');
+//     console.log('Returned: ');
+//     console.log(res);
+//     assert.deepEqual(res, expected);
+//     // assert.deepEqual(res, expected);
+//   });
+// });
+
+// // done
+// describe('traverse a binary tree in post-order', () => {
+//   it('should be true for output: "The nodes of the tree in post-order"', () => {
+//     const input = { root: getBalancedTrees()[0] };
+//     const expected = [3, 7, 5, 12, 20, 15, 10];
+//     const res = traverseInPostorder(input, 'value');
+//     console.log('Returned: ');
+//     console.log(res);
+//     assert.deepEqual(res, expected);
+//     // assert.deepEqual(res, expected);
+//   });
+// });
+
+// // done
+// describe('traverse a binary tree in pre-order', () => {
+//   it('should be true for output: "The nodes of the binary tree in pre-order"', () => {
+//     const input = { root: getBalancedTrees()[0] };
+//     const expected = [10, 5, 3, 7, 15, 12, 20];
+//     const res = traverseInPreorder(input, 'value');
+//     console.log('Returned: ');
+//     console.log(res);
+//     assert.deepEqual(res, expected);
+//     // assert.deepEqual(res, expected);
+//   });
+// });
+
+// // done
+// describe('find the maximum depth of a binary tree', () => {
+//   it('should be true for output: "The maximum depth of the binary tree"', () => {
+//     const input = { root: getBalancedTrees()[0] };
+//     const expected = 3;
+//     const res = maxDepthBinaryTree(input);
+//     console.log('Returned: ');
+//     console.log(res);
+//     assert.equal(res, expected);
+//     // assert.deepEqual(res, expected);
+//   });
+//   it('should be true for output: "The maximum depth of the binary tree"', () => {
+//     const input = { root: getUnbalancedTrees()[2] };
+//     const expected = 4;
+//     const res = maxDepthBinaryTree(input);
+//     console.log('Returned: ');
+//     console.log(res);
+//     assert.equal(res, expected);
+//     // assert.deepEqual(res, expected);
+//   });
+// });
+
+// // done
+// describe('Check if a binary tree is balanced', () => {
+//   it('should be true for output: "True or False"', () => {
+//     const input = { root: getBalancedTrees()[3] };
+//     // console.log(input);
+//     const expected = true;
+//     const res = isBalanced(input);
+//     console.log('Returned: ');
+//     console.log(res);
+//     assert.equal(res, expected);
+//     // assert.deepEqual(res, expected);
+//   });
+//   it('should be true for output: "True or False"', () => {
+//     const input = { root: getUnbalancedTrees()[2] };
+//     // console.log(input);
+//     const expected = false;
+//     const res = isBalanced(input);
+//     console.log('Returned: ');
+//     console.log(res);
+//     assert.equal(res, expected);
+//     // assert.deepEqual(res, expected);
+//   });
+// });
 // // done
 // describe('Check if a binary tree is balanced', () => {
 //   it('should be true for output: "True or False"', () => {

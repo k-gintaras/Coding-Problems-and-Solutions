@@ -26,6 +26,23 @@ const solved = [
   'check if a linked list contains a cycle',
   'find the intersection of two linked lists',
   'Check if a binary tree is balanced',
+  'find the maximum depth of a binary tree',
+  'traverse a binary tree in pre-order',
+  'traverse a binary tree in post-order',
+  'traverse a binary tree in in-order',
+  'Find the lowest common ancestor of two nodes in a binary tree',
+  'check if a string is a valid number',
+  'implement a hash table',
+  'find the longest substring without repeating characters',
+  'find the largest sum of a consecutive subarray',
+  'find the length of the longest common subsequence',
+  'find the number of ways to make change for a given amount',
+  'find the number of valid parentheses combinations',
+  'find the number of ways to traverse a matrix',
+  'find the number of islands in a 2d grid',
+  'find the number of connected components in a graph',
+  'Find the shortest path between two nodes in a graph',
+  'Find the diameter of a binary tree',
 ];
 
 function getSolved() {

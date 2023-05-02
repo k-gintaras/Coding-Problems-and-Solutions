@@ -108,4 +108,72 @@ const titles = [
     title: 'isBinaryTreeBalanced',
     problem: 'Check if a binary tree is balanced',
   },
+  {
+    title: 'maxDepthBinaryTree',
+    problem: 'find the maximum depth of a binary tree',
+  },
+  {
+    title: 'traverseInPreorder',
+    problem: 'traverse a binary tree in pre-order',
+  },
+  {
+    title: 'traverseInPostorder',
+    problem: 'traverse a binary tree in post-order',
+  },
+  {
+    title: 'traverseInOrder',
+    problem: 'traverse a binary tree in in-order',
+  },
+  {
+    title: 'lowestCommonAncestor',
+    problem: 'Find the lowest common ancestor of two nodes in a binary tree',
+  },
+  {
+    title: 'isStringNumber',
+    problem: 'check if a string is a valid number',
+  },
+  {
+    title: 'hashTable',
+    problem: 'implement a hash table',
+  },
+  {
+    title: 'longestNonRepeatingString',
+    problem: 'find the longest substring without repeating characters',
+  },
+  {
+    title: 'largestConsecutiveSum',
+    problem: 'find the largest sum of a consecutive subarray',
+  },
+  {
+    title: 'longestCommonSubsequence',
+    problem: 'find the length of the longest common subsequence',
+  },
+  {
+    title: 'waysToGiveChange',
+    problem: 'find the number of ways to make change for a given amount',
+  },
+  {
+    title: 'waysToUseGivenBrackets',
+    problem: 'find the number of valid parentheses combinations',
+  },
+  {
+    title: 'waysToTraverseMatrix',
+    problem: 'find the number of ways to traverse a matrix',
+  },
+  {
+    title: 'countIslands',
+    problem: 'find the number of islands in a 2d grid',
+  },
+  {
+    title: 'countConnectedNodes',
+    problem: 'find the number of connected components in a graph',
+  },
+  {
+    title: 'shortestUnweightedPath',
+    problem: 'Find the shortest path between two nodes in a graph',
+  },
+  {
+    title: 'binaryTreeDiameter',
+    problem: 'Find the diameter of a binary tree',
+  },
 ];

@@ -1,3 +1,105 @@
+// counting shortest paths on unweighted graphs
+// 0---1
+// |   |
+// |   |
+// 3---2
+// |
+// |
+// 4
+export const uGraph1 = {
+  0: [1, 3],
+  1: [0, 2],
+  2: [1, 3],
+  3: [0, 2, 4],
+  4: [3],
+};
+
+//   0
+//   |
+//   1---2
+//   |
+//   3
+//  / \
+// 4   5
+export const uGraph2 = {
+  0: [1],
+  1: [0, 2, 3],
+  2: [1],
+  3: [1, 4, 5],
+  4: [3],
+  5: [3],
+};
+
+//   1
+//   |
+// 0-2-3---4---5---6
+//   |
+//   3
+export const uGraph3 = {
+  0: [1, 2, 3],
+  1: [0],
+  2: [0],
+  3: [0, 4],
+  4: [3, 5],
+  5: [4, 6],
+  6: [5],
+};
+
+export const uGraphs = [uGraph1, uGraph2, uGraph3];
+export function getUnweightedGraphs() {
+  return uGraphs;
+}
+
+// counting connected components:
+// Expected output: 2 connected components
+export const graph1 = {
+  0: [1, 2],
+  1: [0, 3],
+  2: [0],
+  3: [1],
+  4: [5],
+  5: [4],
+};
+// Expected output: 3 connected components
+
+export const graph2 = {
+  0: [1],
+  1: [0, 2],
+  2: [1],
+  3: [4],
+  4: [3],
+  5: [],
+};
+
+// Expected output: 2 connected components
+export const graph3 = {
+  0: [1, 3],
+  1: [0, 2],
+  2: [1, 3],
+  3: [0, 2, 4],
+  4: [3, 5, 6],
+  5: [4],
+  6: [4],
+  7: [8],
+  8: [7, 9],
+  9: [8],
+};
+
+// Expected output: 4 connected components
+export const graph4 = {
+  0: [1],
+  1: [0],
+  2: [3, 4],
+  3: [2],
+  4: [2],
+  5: [6],
+  6: [5],
+  7: [],
+};
+
+export const graphs = [graph1, graph2, graph3, graph4];
+export const graphAns = [2, 3, 2, 4];
+
 //      10
 //    /    \
 //   5      15
@@ -382,6 +484,13 @@ export function getUnbalancedTrees() {
 }
 export function getAllTrees() {
   return allTrees;
+}
+
+export function getGraphs() {
+  return graphs;
+}
+export function getGraphAns() {
+  return graphAns;
 }
 
 // import {getAllArrays,getHardArrays,getEasyArrays,getTextArray,getSortedNumericArray,getNumericArray,getRandomArray} from './testData.js'
