@@ -1,3 +1,46 @@
+export const rectangles = [
+  {
+    a: {
+      bottomLeft: { x: 0, y: 0 },
+      topRight: { x: 4, y: 4 },
+    },
+    b: {
+      bottomLeft: { x: 2, y: 2 },
+      topRight: { x: 6, y: 6 },
+    },
+  },
+  {
+    a: {
+      bottomLeft: { x: 1, y: 1 },
+      topRight: { x: 5, y: 5 },
+    },
+    b: {
+      bottomLeft: { x: 4, y: 4 },
+      topRight: { x: 8, y: 8 },
+    },
+  },
+  {
+    a: {
+      bottomLeft: { x: 0, y: 0 },
+      topRight: { x: 3, y: 3 },
+    },
+    b: {
+      bottomLeft: { x: 5, y: 5 },
+      topRight: { x: 9, y: 9 },
+    },
+  },
+  {
+    a: {
+      bottomLeft: { x: 2, y: 2 },
+      topRight: { x: 6, y: 6 },
+    },
+    b: {
+      bottomLeft: { x: 3, y: 3 },
+      topRight: { x: 7, y: 7 },
+    },
+  },
+];
+
 // counting shortest paths on unweighted graphs
 // 0---1
 // |   |

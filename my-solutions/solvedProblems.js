@@ -43,6 +43,20 @@ const solved = [
   'find the number of connected components in a graph',
   'Find the shortest path between two nodes in a graph',
   'Find the diameter of a binary tree',
+  'check if two rectangles overlap',
+  'find the number of pairs with a given sum',
+  'find the number of pairs with a given difference',
+  'find the length of the longest increasing subsequence',
+  'find the length of the longest palindromic subsequence',
+  'Find the kth smallest element in an array',
+  'Find the number of inversions in an array',
+  'find the number of subarrays with a given sum',
+  'find the maximum product of a subarray',
+  'Find the minimum number of coins to make a given amount',
+  'find the length of the longest common substring',
+  'find the maximum sum rectangle in a 2d matrix',
+  'find the maximum sum submatrix in a 2d matrix',
+  'find the maximum sum of a circular subarray',
 ];
 
 function getSolved() {

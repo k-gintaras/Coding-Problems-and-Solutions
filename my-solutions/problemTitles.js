@@ -176,4 +176,60 @@ const titles = [
     title: 'binaryTreeDiameter',
     problem: 'Find the diameter of a binary tree',
   },
+  {
+    title: 'rectangleOverlap',
+    problem: 'check if two rectangles overlap',
+  },
+  {
+    title: 'numberOfSumPairs',
+    problem: 'find the number of pairs with a given sum',
+  },
+  {
+    title: 'numberOfDifPairs',
+    problem: 'find the number of pairs with a given difference',
+  },
+  {
+    title: 'longestIncreasingSubsequence',
+    problem: 'find the length of the longest increasing subsequence',
+  },
+  {
+    title: 'longestPalindromicSubsequence',
+    problem: 'find the length of the longest palindromic subsequence',
+  },
+  {
+    title: 'kthSmallest',
+    problem: 'Find the kth smallest element in an array',
+  },
+  {
+    title: 'numberOfInversions',
+    problem: 'Find the number of inversions in an array',
+  },
+  {
+    title: 'countSumSubArrays',
+    problem: 'find the number of subarrays with a given sum',
+  },
+  {
+    title: 'maximumSubArrayProduct',
+    problem: 'find the maximum product of a subarray',
+  },
+  {
+    title: 'minimumCoinAmount',
+    problem: 'Find the minimum number of coins to make a given amount',
+  },
+  {
+    title: 'longestCommonSubstring',
+    problem: 'find the length of the longest common substring',
+  },
+  {
+    title: 'maximumSumRectangle',
+    problem: 'find the maximum sum rectangle in a 2d matrix',
+  },
+  {
+    title: 'maximumSumSubmatrix',
+    problem: 'find the maximum sum submatrix in a 2d matrix',
+  },
+  {
+    title: 'maximumSumCircular',
+    problem: 'find the maximum sum of a circular subarray',
+  },
 ];

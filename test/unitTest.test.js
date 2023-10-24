@@ -27,7 +27,7 @@ import { reverseArray } from '../my-solutions/unorganized/reverseArray.js';
 import { BinarySearchTree } from '../my-solutions/unorganized/binarySearchTree.js';
 import { sortingAlgorithm } from '../my-solutions/unorganized/sortingAlgorithm.js';
 import { isAnagram } from '../my-solutions/unorganized/isAnagram.js';
-import { stringLength } from '../my-solutions/stringLength.js';
+import { stringLength } from '../my-solutions/unorganized/stringLength.js';
 import { isEven } from '../my-solutions/unorganized/isEven.js';
 import { sumArray } from '../my-solutions/unorganized/sumArray.js';
 import { largestNumInBst } from '../my-solutions/unorganized/largestNumInBst.js';
@@ -100,8 +100,304 @@ import {
   binaryTreeDiameter1,
   binaryTreeDiameter2,
   binaryTreeDiameter3,
-} from '../my-solutions/binaryTreeDiameter.js';
+} from '../my-solutions/unorganized/binaryTreeDiameter.js';
 
+import { rectangleOverlap } from '../my-solutions/unorganized/rectangleOverlap.js';
+import { rectangles } from '../testData.js';
+
+import { numberOfSumPairs } from '../my-solutions/unorganized/numberOfSumPairs.js';
+
+import { numberOfDifPairs } from '../my-solutions/unorganized/numberOfDifPairs.js';
+
+import { longestIncreasingSubsequence } from '../my-solutions/unorganized/longestIncreasingSubsequence.js';
+
+import { longestPalindromicSubsequence } from '../my-solutions/unorganized/longestPalindromicSubsequence.js';
+import { kthSmallest } from '../my-solutions/unorganized/kthSmallest.js';
+
+import { numberOfInversions } from '../my-solutions/unorganized/numberOfInversions.js';
+
+import { countSumSubArrays } from '../my-solutions/unorganized/countSumSubArrays.js';
+
+import { maximumSubArrayProduct } from '../my-solutions/unorganized/maximumSubArrayProduct.js';
+import { minimumCoinAmount } from '../my-solutions/unorganized/minimumCoinAmount.js';
+
+import { longestCommonSubstring } from '../my-solutions/unorganized/longestCommonSubstring.js';
+
+import { maximumSumSubmatrix } from '../my-solutions/unorganized/maximumSumSubmatrix.js';
+
+import { maximumSumCircular } from '../my-solutions/unorganized/maximumSumCircular.js';
+
+describe('find the maximum sum of a circular subarray', () => {
+  it('should be true for output: "8"', () => {
+    const input = [1, -2, 3, 4];
+    const expected = 8; //3+4  +1
+    const res = maximumSumCircular(input);
+    console.log('Returned: ');
+    console.log(res);
+    assert.equal(res, expected);
+    // assert.deepEqual(res, expected);
+  });
+  it('should be true for output: "8"', () => {
+    const input = [5, -3, 5];
+    const expected = 10; //3+4  +1
+    const res = maximumSumCircular(input);
+    console.log('Returned: ');
+    console.log(res);
+    assert.equal(res, expected);
+    // assert.deepEqual(res, expected);
+  });
+});
+// this is same as previous, but it also lets me practice and train my memory a little bit
+// describe('find the maximum sum rectangle in a 2d matrix', () => {
+//   it('should be true for output: "The maximum sum rectangle is [[3, 8, 10, 1], [-4, -1, 1, 7]] with a sum of 29."', () => {
+//     const input = [
+//       [6, -5, -7, 4, -4],
+//       [-9, 3, -6, 5, 2],
+//       [-10, 4, 7, -6, 3],
+//       [-8, 9, -3, 3, -7],
+//     ];
+//     const expected = [
+//       [4, 7],
+//       [9, -3],
+//     ]; // 29
+//     const res = maximumSumSubmatrix(input);
+//     console.log('Returned: ');
+//     console.log(res);
+//     assert.deepEqual(res, expected);
+//     // assert.deepEqual(res, expected);
+//   });
+// });
+
+// describe('find the maximum sum rectangle in a 2d matrix', () => {
+//   it('should be true for output: "The maximum sum rectangle is [[3, 8, 10, 1], [-4, -1, 1, 7]] with a sum of 29."', () => {
+//     const input = [
+//       [6, -5, -7, 4, -4],
+//       [-9, 3, -6, 5, 2],
+//       [-10, 4, 7, -6, 3],
+//       [-8, 9, -3, 3, -7],
+//     ];
+//     const expected = [
+//       [4, 7],
+//       [9, -3],
+//     ]; // 29
+//     const res = maximumSumRectangle(input);
+//     console.log('Returned: ');
+//     console.log(res);
+//     assert.deepEqual(res, expected);
+//     // assert.deepEqual(res, expected);
+//   });
+// });
+
+// describe('find the length of the longest common substring', () => {
+//   it('should be true for output: "The output should be 3, as the longest common substring is ADH"', () => {
+//     const input1 = 'ABCEDGH';
+//     const input2 = 'AECEDFHR';
+//     const expected = 3; //"adh"
+//     const res = longestCommonSubstring(input1, input2);
+//     console.log('Returned: ');
+//     console.log(res);
+//     assert.equal(res, expected);
+//     // assert.deepEqual(res, expected);
+//   });
+// });
+
+// describe('Find the minimum number of coins to make a given amount', () => {
+//   it('should be true for output: "The minimum number of coins needed to make 40 is 4 (1x25, 1x10, 1x5, 1x1)"', () => {
+//     const input = [1, 5, 10, 25];
+//     const input2 = 40;
+//     const expected = 3; // 'The minimum number of coins needed to make 40 is 3 (1x25, 1x10, 1x5, 0x1)';
+
+//     const res = minimumCoinAmount(input, input2);
+//     console.log('Returned: ');
+//     console.log(res);
+//     assert.equal(res, expected);
+//     // assert.deepEqual(res, expected);
+//   });
+//   it('should be true for output: "The minimum number of coins needed to make 40 is 4 (1x25, 1x10, 1x5, 1x1)"', () => {
+//     const input = [25, 10, 5];
+//     const input2 = 30;
+//     const expected = 2; // 'The minimum number of coins needed to make 40 is 3 (1x25, 1x10, 1x5, 0x1)';
+
+//     const res = minimumCoinAmount(input, input2);
+//     console.log('Returned: ');
+//     console.log(res);
+//     assert.equal(res, expected);
+//     // assert.deepEqual(res, expected);
+//   });
+//   it('should be true for output: "The minimum number of coins needed to make 40 is 4 (1x25, 1x10, 1x5, 1x1)"', () => {
+//     const input = [9, 6, 5, 1];
+//     const input2 = 11;
+//     const expected = 2; // 'The minimum number of coins needed to make 40 is 3 (1x25, 1x10, 1x5, 0x1)';
+
+//     const res = minimumCoinAmount(input, input2);
+//     console.log('Returned: ');
+//     console.log(res);
+//     assert.equal(res, expected);
+//     // assert.deepEqual(res, expected);
+//   });
+// });
+
+// describe('find the maximum product of a subarray', () => {
+//   it('should be true for output: "120"', () => {
+//     const input = [1, 2, 3, 4, 5];
+//     const expected = 120;
+//     const res = maximumSubArrayProduct(input);
+//     console.log('Returned: ');
+//     console.log(res);
+//     assert.equal(res, expected);
+//     // assert.deepEqual(res, expected);
+//   });
+// });
+
+// describe('find the number of subarrays with a given sum', () => {
+//   it('should be true for output: "3"', () => {
+//     const input = [1, 2, 3];
+//     const input2 = 3;
+//     const expected = 2;
+//     const res = countSumSubArrays(input, input2);
+//     console.log('Returned: ');
+//     console.log(res);
+//     assert.equal(res, expected);
+//     // assert.deepEqual(res, expected);
+//   });
+// });
+
+// describe('Find the number of inversions in an array', () => {
+//   it('should be true for output: "3"', () => {
+//     const input = [2, 4, 1, 3, 5];
+//     const expected = 3;
+//     const res = numberOfInversions(input);
+//     console.log('Returned: ');
+//     console.log(res);
+//     assert.equal(res, expected);
+//     // assert.deepEqual(res, expected);
+//   });
+// });
+
+// describe('Find the kth smallest element in an array', () => {
+//   it('should be true for output: "The 3rd smallest element in the array is 3"', () => {
+//     const input = [3, 5, 2, 4, 1];
+//     const expected = 3;
+//     const n = 3;
+//     const res = kthSmallest(input, n);
+//     console.log('Returned: ');
+//     console.log(res);
+//     assert.equal(res, expected);
+//     // assert.deepEqual(res, expected);
+//   });
+// });
+
+// describe('find the length of the longest palindromic subsequence', () => {
+//   it('should be true for output: "5"', () => {
+//     const input = 'ABCBAC';
+//     const expected = 5;
+//     const res = longestPalindromicSubsequence(input);
+//     console.log('Returned: ');
+//     console.log(res);
+//     assert.equal(res, expected);
+//     // assert.deepEqual(res, expected);
+//   });
+// });
+
+// describe('find the length of the longest increasing subsequence', () => {
+//   it('should be true for output: "6"', () => {
+//     const input = [10, 22, 9, 33, 21, 50, 41, 60, 80];
+//     const expected = 6;
+//     const res = longestIncreasingSubsequence(input);
+//     console.log('Returned: ');
+//     console.log(res);
+//     assert.equal(res, expected);
+//     // assert.deepEqual(res, expected);
+//   });
+// });
+
+// // done
+// describe('find the number of pairs with a given difference', () => {
+//   it('should be true for output: "Number of pairs with given difference = 2"', () => {
+//     const input1 = [1, 5, 3, 4, 2];
+//     const input2 = 2;
+//     const expected = 3;
+//     const uniquesOnly = false;
+//     const res = numberOfDifPairs(input1, input2, uniquesOnly);
+//     console.log('Returned: ');
+//     console.log(res);
+//     assert.equal(res, expected);
+//     // assert.deepEqual(res, expected);
+//   });
+//   it('should be true for output: "Number of pairs with given difference = 4"', () => {
+//     const array = [6, 12, 4, 8, 2, 9, 15, 1, 10];
+//     const difference = 4;
+//     const expected = 4;
+//     const uniquesOnly = false;
+//     const res = numberOfDifPairs(array, difference, uniquesOnly);
+//     console.log('Returned: ');
+//     console.log(res);
+//     assert.equal(res, expected);
+//     // assert.deepEqual(res, expected);
+//   });
+// });
+
+// // done
+// describe('find the number of pairs with a given sum', () => {
+//   it('should be true for output: "Number of pairs: 2"', () => {
+//     const input1 = [1, 2, 3, 4, 5];
+//     const input2 = 7;
+//     const expected = 2;
+//     const res = numberOfSumPairs(input1, input2);
+//     console.log('Returned: ');
+//     console.log(res);
+//     assert.equal(res, expected);
+//     // assert.deepEqual(res, expected);
+//   });
+//   it('should be true for output: "Number of pairs: 2"', () => {
+//     const numbers1 = [1, 3, 5, 7, 9];
+//     const targetSum1 = 8;
+
+//     const expected = 2;
+//     const res = numberOfSumPairs(numbers1, targetSum1);
+//     console.log('Returned: ');
+//     console.log(res);
+//     assert.equal(res, expected);
+//     // assert.deepEqual(res, expected);
+//   });
+//   it('should be true for output: "Number of pairs: 2"', () => {
+//     const numbers2 = [1, 4, 7, 4, 9, 2, 5, 7, 3, 8, 8, 13, -2];
+//     const targetSum2 = 11;
+
+//     const expected = 4;
+//     const res = numberOfSumPairs(numbers2, targetSum2, true);
+//     console.log('Returned: ');
+//     console.log(res);
+//     assert.equal(res, expected);
+//     // assert.deepEqual(res, expected);
+//   });
+// });
+
+// done
+// describe('check if two rectangles overlap', () => {
+//   it('should be true for output: "The output will be a boolean value indicating whether the rectangles overlap or not (true/false)."', () => {
+//     const i = 0;
+//     const a = rectangles[i].a;
+//     const b = rectangles[i].b;
+//     const expected = true;
+//     const res = rectangleOverlap(a, b);
+//     console.log('Returned: ');
+//     console.log(res);
+//     assert.equal(res, expected);
+//     // assert.deepEqual(res, expected);
+//   });
+//   it('should be true for output: "The output will be a boolean value indicating whether the rectangles overlap or not (true/false)."', () => {
+//     const i = 2;
+//     const a = rectangles[i].a;
+//     const b = rectangles[i].b;
+//     const expected = false;
+//     const res = rectangleOverlap(a, b);
+//     console.log('Returned: ');
+//     console.log(res);
+//     assert.equal(res, expected);
+//     // assert.deepEqual(res, expected);
+//   });
+// });
 // // done
 // describe('Find the diameter of a binary tree', () => {
 //   class Node {
