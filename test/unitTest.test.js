@@ -1,4 +1,5 @@
 import assert from 'assert';
+import { expect } from 'chai';
 
 import { LinkedList } from '../my-solutions/unorganized/implementLinkedlist.js';
 
@@ -17,10 +18,7 @@ import {
 
 import { isPalindrome } from '../my-solutions/unorganized/isPalindrome.js';
 import { isPrime } from '../my-solutions/unorganized/isPrime.js';
-import {
-  twoLargest,
-  twoLargestManual,
-} from '../my-solutions/unorganized/twoLargest.js';
+import { twoLargest, twoLargestManual } from '../my-solutions/unorganized/twoLargest.js';
 
 import { mostCommon } from '../my-solutions/unorganized/mostCommon.js';
 import { reverseArray } from '../my-solutions/unorganized/reverseArray.js';
@@ -57,12 +55,7 @@ import { traverseInOrder } from '../my-solutions/unorganized/traverseInOrder.js'
 
 import { lowestCommonAncestor } from '../my-solutions/unorganized/lowestCommonAncestor.js';
 
-import {
-  isStringNumber,
-  isStringInteger,
-  isStringFloat,
-  isStringHexadecimal,
-} from '../my-solutions/unorganized/isStringNumber.js';
+import { isStringNumber, isStringInteger, isStringFloat, isStringHexadecimal } from '../my-solutions/unorganized/isStringNumber.js';
 
 import { HashTable } from '../my-solutions/unorganized/hashTable.js';
 
@@ -70,22 +63,11 @@ import { longestNonRepeatingString } from '../my-solutions/unorganized/longestNo
 
 import { largestConsecutiveSum } from '../my-solutions/unorganized/largestConsecutiveSum.js';
 
-import {
-  lengthOfLcs,
-  longestCommonSubsequence,
-  findLargestCommonSubsequence,
-} from '../my-solutions/unorganized/longestCommonSubsequence.js';
+import { lengthOfLcs, longestCommonSubsequence, findLargestCommonSubsequence } from '../my-solutions/unorganized/longestCommonSubsequence.js';
 
-import {
-  waysToGiveChange,
-  countWaysToGive,
-  countWaysToGiveCoin,
-} from '../my-solutions/unorganized/waysToGiveChange.js';
+import { waysToGiveChange, countWaysToGive, countWaysToGiveCoin } from '../my-solutions/unorganized/waysToGiveChange.js';
 
-import {
-  waysToUseGivenBrackets,
-  catalanBracketCount,
-} from '../my-solutions/unorganized/waysToUseGivenBrackets.js';
+import { waysToUseGivenBrackets, catalanBracketCount } from '../my-solutions/unorganized/waysToUseGivenBrackets.js';
 
 import { waysToTraverseMatrix } from '../my-solutions/unorganized/waysToTraverseMatrix.js';
 
@@ -96,11 +78,7 @@ import { getGraphs, getGraphAns } from '../testData.js';
 
 import { shortestUnweightedPath } from '../my-solutions/unorganized/shortestUnweightedPath.js';
 
-import {
-  binaryTreeDiameter1,
-  binaryTreeDiameter2,
-  binaryTreeDiameter3,
-} from '../my-solutions/unorganized/binaryTreeDiameter.js';
+import { binaryTreeDiameter1, binaryTreeDiameter2, binaryTreeDiameter3 } from '../my-solutions/unorganized/binaryTreeDiameter.js';
 
 import { rectangleOverlap } from '../my-solutions/unorganized/rectangleOverlap.js';
 import { rectangles } from '../testData.js';
@@ -127,27 +105,339 @@ import { maximumSumSubmatrix } from '../my-solutions/unorganized/maximumSumSubma
 
 import { maximumSumCircular } from '../my-solutions/unorganized/maximumSumCircular.js';
 
-describe('find the maximum sum of a circular subarray', () => {
-  it('should be true for output: "8"', () => {
-    const input = [1, -2, 3, 4];
-    const expected = 8; //3+4  +1
-    const res = maximumSumCircular(input);
-    console.log('Returned: ');
-    console.log(res);
-    assert.equal(res, expected);
-    // assert.deepEqual(res, expected);
-  });
-  it('should be true for output: "8"', () => {
-    const input = [5, -3, 5];
-    const expected = 10; //3+4  +1
-    const res = maximumSumCircular(input);
+import { trieTest } from '../my-solutions/unorganized/trie.js';
+
+import { isSubsequence } from '../my-solutions/unorganized/isSubsequence.js';
+
+import { isBinarySearchTree } from '../my-solutions/unorganized/isBinarySearchTree.js';
+import { maximumSumTwoChanged } from '../my-solutions/unorganized/maximumSumTwoChanged.js';
+import { minDeleteToSorted } from '../my-solutions/unorganized/minDeleteToSorted.js';
+import { minStepsToEqualStrings } from '../my-solutions/unorganized/minStepsToEqualStrings.js';
+import { maxSumCircularSubArray2 } from '../my-solutions/unorganized/maxSumCircularSubArray2.js';
+
+describe('find the maximum subarray sum in a circular array', () => {
+  it('should be true for output: "7"', () => {
+    const input = [2, -1, 3, 4, -5];
+    const expected = '7';
+    const res = maxSumCircularSubArray2(arr);
     console.log('Returned: ');
     console.log(res);
     assert.equal(res, expected);
     // assert.deepEqual(res, expected);
   });
 });
-// this is same as previous, but it also lets me practice and train my memory a little bit
+
+// describe('find the minimum number of steps to transform one string to another', () => {
+//   it(`'should be true for output: "3 steps: 'cat' -> 'cot' -> 'cog' -> 'dog'"'`, () => {
+//     const input1 = 'cat';
+//     const input2 = 'dog';
+//     const expected = 3;
+//     const res = minStepsToEqualStrings(input1, input2);
+//     console.log('Returned: ');
+//     console.log(res);
+//     assert.equal(res, expected);
+//     // assert.deepEqual(res, expected);
+//   });
+//   it(`'should be true for output: "3 steps: 'cat' -> 'cot' -> 'cog' -> 'dog'"'`, () => {
+//     const input1 = 'song';
+//     const input2 = 'bongaloo';
+//     const expected = 5;
+//     const res = minStepsToEqualStrings(input1, input2);
+//     console.log('Returned: ');
+//     console.log(res);
+//     assert.equal(res, expected);
+//     // assert.deepEqual(res, expected);
+//   });
+// });
+
+// describe('find the minimum number of elements to delete from an array to make it sorted', () => {
+//   it('should be true for output: "2"', () => {
+//     const input = [5, 3, 1, 2, 4];
+//     const expected = 2;
+//     const res = minDeleteToSorted(input);
+//     console.log('Returned: ');
+//     console.log(res);
+//     assert.equal(res, expected);
+//     // assert.deepEqual(res, expected);
+//   });
+//   it('should return 4 for array with alternating increases and decreases', () => {
+//     const input = [1, 3, 2, 4, 3, 5];
+//     const expected = 2;
+//     const res = minDeleteToSorted(input);
+//     assert.equal(res, expected);
+//   });
+//   it('should return 0 for an already sorted array', () => {
+//     const input = [1, 2, 3, 4, 5];
+//     const expected = 0;
+//     const res = minDeleteToSorted(input);
+//     assert.equal(res, expected);
+//   });
+//   it('should return 0 for a reverse sorted array', () => {
+//     const input = [5, 4, 3, 2, 1];
+//     const expected = 0;
+//     const res = minDeleteToSorted(input);
+//     assert.equal(res, expected);
+//   });
+//   it('should return 0 for array with all equal elements', () => {
+//     const input = [2, 2, 2, 2, 2];
+//     const expected = 0;
+//     const res = minDeleteToSorted(input);
+//     assert.equal(res, expected);
+//   });
+//   it('should return a correct number for a large array with random elements', () => {
+//     const input = [10, 1, 5, 3, 8, 7, 6, 2, 9, 4];
+//     const expected = 5; // Assuming the correct number of deletions is 6
+//     const res = minDeleteToSorted(input);
+//     assert.equal(res, expected);
+//   });
+// });
+
+// describe('Find the maximum sum of a subarray with at most two elements changed', () => {
+//   it('should handle a mix of positive and negative numbers1', () => {
+//     const input = [1, -1, 1];
+//     const expected = 11; // Assuming change = 5; change -3 and -5
+//     const res = maximumSumTwoChanged(input);
+//     assert.equal(res, expected);
+//   });
+//   it('should handle a mix of positive and negative numbers2', () => {
+//     const input = [-2, 1, -3, 4, -1, 2, 1, -5, 4];
+//     const expected = 7; // Assuming change = 5; change -3 and -5
+//     const res = maximumSumTwoChanged(input);
+//     assert.equal(res, expected);
+//   });
+
+//   it('should handle an array of all positive numbers', () => {
+//     const input = [1, 2, 3, 4];
+//     const expected = 10; // No need to change any element
+//     const res = maximumSumTwoChanged(input);
+//     assert.equal(res, expected);
+//   });
+
+//   it('should handle an array of all negative numbers', () => {
+//     const input = [-1, -2, -3, -4];
+//     const expected = 10; // Change any two elements to 5
+//     const res = maximumSumTwoChanged(input);
+//     assert.equal(res, expected);
+//   });
+
+//   it('should handle an array with a single element', () => {
+//     const input = [5];
+//     const expected = 5; // Only one element, no change needed
+//     const res = maximumSumTwoChanged(input);
+//     assert.equal(res, expected);
+//   });
+
+//   it('should handle an empty array', () => {
+//     const input = [];
+//     const expected = 0; // No elements to sum
+//     const res = maximumSumTwoChanged(input);
+//     assert.equal(res, expected);
+//   });
+
+//   it('should handle an array where changing elements is not beneficial', () => {
+//     const input = [5, 6, 7, 8];
+//     const expected = 26; // Array is already maximized
+//     const res = maximumSumTwoChanged(input);
+//     assert.equal(res, expected);
+//   });
+// });
+
+// import { longestValidParenthesis } from '../my-solutions/unorganized/longestValidParenthesis.js';
+
+// describe('find the length of the longest valid parentheses sequence', () => {
+//   it('should be true for output: "8"', () => {
+//     const input = '((()))()';
+//     const expected = '8';
+//     const res = longestValidParenthesis(input);
+//     console.log('Returned: ');
+//     console.log(res);
+//     assert.equal(res, expected);
+//     // assert.deepEqual(res, expected);
+//   });
+// });
+
+// import { postOrderTraversalBST } from '../my-solutions/unorganized/postOrderTraversalBST.js';
+
+// describe('Reconstruct a binary search tree from its postorder traversal', () => {
+//   it('should reconstruct an empty tree', () => {
+//     const input = [];
+//     const expected = [];
+//     const res = postOrderTraversalBST(input);
+//     //assert.deepEqual(inorderTraversal(res), expected);
+//   });
+
+//   it('should reconstruct a single node tree', () => {
+//     const input = [5];
+//     const expected = [5];
+//     const res = postOrderTraversalBST(input);
+//     //assert.deepEqual(inorderTraversal(res), expected);
+//   });
+
+//   it('should reconstruct a complete binary tree', () => {
+//     const input = [1, 3, 2, 5, 7, 6, 4]; // Postorder of the tree with root 4
+//     const expected = [1, 2, 3, 4, 5, 6, 7]; // Inorder (sorted) of the same tree
+//     const res = postOrderTraversalBST(input);
+//     //assert.deepEqual(inorderTraversal(res), expected);
+//   });
+
+//   it('should reconstruct a left-skewed tree', () => {
+//     const input = [1, 2, 3, 4, 5]; // Postorder of a left-skewed tree
+//     const expected = [1, 2, 3, 4, 5]; // Inorder (sorted) of the same tree
+//     const res = postOrderTraversalBST(input);
+//     //assert.deepEqual(inorderTraversal(res), expected);
+//   });
+
+//   it('should reconstruct a right-skewed tree', () => {
+//     const input = [5, 4, 3, 2, 1]; // Postorder of a right-skewed tree
+//     const expected = [1, 2, 3, 4, 5]; // Inorder (sorted) of the same tree
+//     const res = postOrderTraversalBST(input);
+//     //assert.deepEqual(inorderTraversal(res), expected);
+//   });
+
+//   // Add more test cases as needed
+// });
+
+// import { preorderTraversalBST } from '../my-solutions/unorganized/preorderTraversalBST.js';
+
+// describe('Reconstruct a binary search tree from its preorder traversal', () => {
+//   it('should be true for output: "A binary search tree reconstructed from the given preorder traversal sequence"', () => {
+//     const input = 'A preorder traversal sequence of a binary search tree';
+//     const expected = 'A binary search tree reconstructed from the given preorder traversal sequence';
+//     const res = preorderTraversalBST();
+//     console.log('Returned: ');
+//     console.log(res);
+//     assert.equal(res, expected);
+//     // assert.deepEqual(res, expected);
+//   });
+// });
+
+// import { constructBST } from '../my-solutions/unorganized/constructBST.js';
+
+// describe('Construct a binary search tree from a given array', () => {
+//   it('should be true for output: "A binary search tree with the given array elements as nodes"', () => {
+//     const input = [6, 3, 5, 7, 9];
+//     const expected = 'A binary search tree with the given array elements as nodes';
+//     const res = constructBST(input);
+//     console.log('Returned: ');
+//     console.log(res);
+//     assert.equal(res, expected);
+//     // assert.deepEqual(res, expected);
+//   });
+// });
+
+// class TreeNode {
+//   constructor(value) {
+//     this.value = value;
+//     this.left = null;
+//     this.right = null;
+//   }
+// }
+
+// describe('Check if a binary tree is a binary search tree', () => {
+//   it('should return true for a valid BST', () => {
+//     const root = new TreeNode(10);
+//     root.left = new TreeNode(5);
+//     root.right = new TreeNode(15);
+//     root.left.left = new TreeNode(3);
+//     root.left.right = new TreeNode(7);
+//     root.right.left = new TreeNode(12);
+//     root.right.right = new TreeNode(18);
+//     assert.equal(isBinarySearchTree(root), true);
+//   });
+
+//   it('should return false for an invalid BST', () => {
+//     const root = new TreeNode(10);
+//     root.left = new TreeNode(5);
+//     root.right = new TreeNode(8); // Should be greater than 10 to be valid
+//     assert.equal(isBinarySearchTree(root), false);
+//   });
+
+//   it('should return true for a single-node tree', () => {
+//     const root = new TreeNode(10);
+//     assert.equal(isBinarySearchTree(root), true);
+//   });
+
+//   it('should return true for an empty tree', () => {
+//     assert.equal(isBinarySearchTree(null), true);
+//   });
+
+//   it('should return false for a tree with duplicate values', () => {
+//     const root = new TreeNode(10);
+//     root.left = new TreeNode(10); // Duplicate value
+//     assert.equal(isBinarySearchTree(root), false);
+//   });
+// });
+
+// describe('check if a string is a subsequence of another string', () => {
+//   it('should return true when str1 is a subsequence of str2', () => {
+//     const str1 = 'abc';
+//     const str2 = 'ahbgdc';
+//     const result = isSubsequence(str1, str2);
+//     expect(result).to.be.true;
+//   });
+
+//   it('should return false when str1 is not a subsequence of str2', () => {
+//     const str1 = 'axc';
+//     const str2 = 'ahbgdc';
+//     const result = isSubsequence(str1, str2);
+//     expect(result).to.be.false;
+//   });
+
+//   it('should return true for an empty str1', () => {
+//     const str1 = '';
+//     const str2 = 'ahbgdc';
+//     const result = isSubsequence(str1, str2);
+//     expect(result).to.be.true;
+//   });
+
+//   it('should return false for an empty str2 but non-empty str1', () => {
+//     const str1 = 'abc';
+//     const str2 = '';
+//     const result = isSubsequence(str1, str2);
+//     expect(result).to.be.false;
+//   });
+
+//   it('should return true when both str1 and str2 are empty', () => {
+//     const str1 = '';
+//     const str2 = '';
+//     const result = isSubsequence(str1, str2);
+//     expect(result).to.be.true;
+//   });
+// });
+
+// describe('implement a trie', () => {
+//   it('should be true for output: "The corresponding trie"', () => {
+//     const input = 'A string';
+//     const expected = 'The corresponding trie';
+//     const res = trieTest(input);
+//     console.log('Returned: ');
+//     console.log(res);
+//     assert.equal(res, res);
+//     // assert.deepEqual(res, expected);
+//   });
+// });
+
+// describe('find the maximum sum of a circular subarray', () => {
+//   it('should be true for output: "8"', () => {
+//     const input = [1, -2, 3, 4];
+//     const expected = 8; //3+4  +1
+//     const res = maximumSumCircular(input);
+//     console.log('Returned: ');
+//     console.log(res);
+//     assert.equal(res, expected);
+//     // assert.deepEqual(res, expected);
+//   });
+//   it('should be true for output: "8"', () => {
+//     const input = [5, -3, 5];
+//     const expected = 10; //3+4  +1
+//     const res = maximumSumCircular(input);
+//     console.log('Returned: ');
+//     console.log(res);
+//     assert.equal(res, expected);
+//     // assert.deepEqual(res, expected);
+//   });
+// });
+// // this is same as previous, but it also lets me practice and train my memory a little bit
 // describe('find the maximum sum rectangle in a 2d matrix', () => {
 //   it('should be true for output: "The maximum sum rectangle is [[3, 8, 10, 1], [-4, -1, 1, 7]] with a sum of 29."', () => {
 //     const input = [

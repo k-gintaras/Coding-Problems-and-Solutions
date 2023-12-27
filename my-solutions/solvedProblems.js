@@ -57,6 +57,18 @@ const solved = [
   'find the maximum sum rectangle in a 2d matrix',
   'find the maximum sum submatrix in a 2d matrix',
   'find the maximum sum of a circular subarray',
+  'implement a trie',
+  'check if a string is a subsequence of another string',
+  'Check if a binary tree is a binary search tree',
+  'Construct a binary search tree from a given array',
+  'Reconstruct a binary search tree from its preorder traversal',
+  'Reconstruct a binary search tree from its postorder traversal',
+  'find the length of the longest valid parentheses sequence',
+  'Find the maximum sum of a subarray with at most two elements changed',
+  'find the minimum number of elements to delete from an array to make it sorted',
+  'find the minimum number of steps to transform one string to another',
+  'find the maximum subarray sum in a circular array',
+  'find the maximum product subarray',
 ];
 
 function getSolved() {

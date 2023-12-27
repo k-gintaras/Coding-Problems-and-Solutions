@@ -73,8 +73,7 @@ const titles = [
   },
   {
     title: 'findDifference',
-    problem:
-      'find the difference between the largest and smallest elements in an array',
+    problem: 'find the difference between the largest and smallest elements in an array',
   },
   {
     title: 'queue',
@@ -231,5 +230,53 @@ const titles = [
   {
     title: 'maximumSumCircular',
     problem: 'find the maximum sum of a circular subarray',
+  },
+  {
+    title: 'trie',
+    problem: 'implement a trie',
+  },
+  {
+    title: 'isSubsequence',
+    problem: 'check if a string is a subsequence of another string',
+  },
+  {
+    title: 'isBinarySearchTree',
+    problem: 'Check if a binary tree is a binary search tree',
+  },
+  {
+    title: 'constructBST',
+    problem: 'Construct a binary search tree from a given array',
+  },
+  {
+    title: 'preorderTraversalBST',
+    problem: 'Reconstruct a binary search tree from its preorder traversal',
+  },
+  {
+    title: 'postOrderTraversalBST',
+    problem: 'Reconstruct a binary search tree from its postorder traversal',
+  },
+  {
+    title: 'longestValidParenthesis',
+    problem: 'find the length of the longest valid parentheses sequence',
+  },
+  {
+    title: 'maximumSumTwoChanged',
+    problem: 'Find the maximum sum of a subarray with at most two elements changed',
+  },
+  {
+    title: 'minDeleteToSorted',
+    problem: 'find the minimum number of elements to delete from an array to make it sorted',
+  },
+  {
+    title: 'minStepsToEqualStrings',
+    problem: 'find the minimum number of steps to transform one string to another',
+  },
+  {
+    title: 'maxSumCircularSubArray2',
+    problem: 'find the maximum subarray sum in a circular array',
+  },
+  {
+    title: 'maxProductSubarray',
+    problem: 'find the maximum product subarray',
   },
 ];
